@@ -1,2 +1,2 @@
-language = "bash"
-run = "python hello_world.py"
+num = 3.4
+print(num)
