@@ -1,1 +1,2 @@
-run = "echo hello word"
+run = "python IDLE-exercises/exercise_1.py"
+language = "python3"
