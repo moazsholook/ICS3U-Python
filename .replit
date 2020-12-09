@@ -1,2 +1,2 @@
-run = "python IDLE-exercises/exercise_1.py"
+run = "python IDLE-exercises/exercise_3.py"
 language = "python3"
