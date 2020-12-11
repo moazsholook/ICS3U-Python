@@ -1,2 +1,2 @@
-run = "python python-assignment/problem-6.py"
+run = "python python-assignment/problem-3.py"
 language = "python3"
