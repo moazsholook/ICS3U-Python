@@ -1,14 +1,26 @@
+class Error(Exception):
+  pass
+class ValueNegativeError(Error):
+  pass
+
+
 my_list = []
 while True:
-  num = int(input("Enter a number: "))  
-  if num == 0:
-    break
-  else:
-    my_list.append(num)
-  
-
+  try:   
+    num = int(input("Enter an integer. Enter 0 to end list: "))
+    if num < 0:
+      raise ValueNegativeError
+    if num == 0:
+      break
+      my_list.append(num)
+  except ValueNegativeError:
+      print("Error! Your input must be POSITIVE.\n")
+      continue
+  except ValueError:
+      print("Error! Your input must be an INTEGER.\n")
+      continue
+ 
 my_list.sort()
-print(my_list)
 mean = sum(my_list)/2
 print(f"mean: {mean}")
 if len(my_list)%2 == 1:
@@ -22,4 +34,4 @@ else:
 max_value = my_list[-1]
 min_value = my_list[0]
 range_of_list = max_value - min_value
-print(f"range: {range_of_list}) 
+print(f"range: {range_of_list}") 
